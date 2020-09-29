@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="weather">Weather</string>
+    <string name="todayTemperature">17°C</string>
+    <string name="currentCity">St.Petersburg</string>
+    <string name="wind">Wind</string>
+    <string name="currentWind">9 m/s</string>
+    <string name="humidity">Humidity</string>
+    <string name="currentHumidity">70%</string>
+    <string name="sunday">Sun</string>
+    <string name="sundaysTemperature">21°C</string>
+    <string name="monday">Mon</string>
+    <string name="mondaysTemperature">19°C</string>
+    <string name="tuesday">Tue</string>
+    <string name="tuesdaysTemperature">17°C</string>
+    <string name="itIsWednesdayMyDudes">Wed</string>
+    <string name="wednesdayTemperature">22.8°C</string>
+    <string name="thursday">Thu</string>
+    <string name="thursdayTemperature">22°C</string>
+    <string name="friday">Fri</string>
+    <string name="fridaysTemperature">20°C</string>
+    <string name="saturday">Sat</string>
+    <string name="saturdaysTemperature">18°C</string>
+    <string name="buttonHome">Home</string>
+    <string name="buttonSettings">Settings</string>
+    <string name="buttonDontKnowWhatItIs">Squares))</string>
+    <string name="buttonGeo">Geo</string>
+</resources>

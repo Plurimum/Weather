@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="@string/weather"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/rainy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todayTemperature"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/currentCity"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temperature" />
+
+        <TextView
+            android:id="@+id/Wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wind"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/Humidity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cityName" />
+
+
+        <ImageView
+            android:id="@+id/WindImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/wind"
+            app:layout_constraintEnd_toEndOf="@+id/Wind"
+            app:layout_constraintStart_toStartOf="@+id/Wind"
+            app:layout_constraintTop_toBottomOf="@id/Wind" />
+
+        <TextView
+            android:id="@+id/WindValue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/currentWind"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@id/WindImage"
+            app:layout_constraintStart_toStartOf="@id/WindImage"
+            app:layout_constraintTop_toBottomOf="@id/WindImage" />
+
+        <TextView
+            android:id="@+id/Humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/humidity"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Wind"
+            app:layout_constraintTop_toBottomOf="@id/cityName" />
+
+        <ImageView
+            android:id="@+id/HumidityImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/humidity"
+            app:layout_constraintEnd_toEndOf="@+id/Humidity"
+            app:layout_constraintStart_toStartOf="@+id/Humidity"
+            app:layout_constraintTop_toBottomOf="@id/Humidity" />
+
+
+        <TextView
+            android:id="@+id/HumidityValue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/currentHumidity"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@id/HumidityImage"
+            app:layout_constraintStart_toStartOf="@id/HumidityImage"
+            app:layout_constraintTop_toBottomOf="@id/HumidityImage" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:id="@+id/SundayText"
+            android:text="@string/sunday"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/MondayText"
+            app:layout_constraintTop_toBottomOf="@id/WindValue" />
+
+        <ImageView
+            android:id="@+id/SundayImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sunny"
+            app:layout_constraintEnd_toEndOf="@id/SundayText"
+            app:layout_constraintStart_toStartOf="@id/SundayText"
+            app:layout_constraintTop_toBottomOf="@id/SundayText" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:text="@string/sundaysTemperature"
+            app:layout_constraintEnd_toEndOf="@id/SundayImage"
+            app:layout_constraintStart_toStartOf="@id/SundayImage"
+            app:layout_constraintTop_toBottomOf="@id/SundayImage" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:id="@+id/MondayText"
+            android:text="@string/monday"
+            app:layout_constraintStart_toEndOf="@id/SundayText"
+            app:layout_constraintTop_toBottomOf="@id/WindValue"
+            app:layout_constraintEnd_toStartOf="@id/TuesdayText"/>
+
+        <ImageView
+            android:id="@+id/MondayImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sunny"
+            app:layout_constraintEnd_toEndOf="@id/MondayText"
+            app:layout_constraintStart_toStartOf="@id/MondayText"
+            app:layout_constraintTop_toBottomOf="@id/MondayText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mondaysTemperature"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/MondayImage"
+            app:layout_constraintStart_toStartOf="@id/MondayImage"
+            app:layout_constraintTop_toBottomOf="@id/MondayImage" />
+
+        <TextView
+            android:id="@+id/TuesdayText"
+            style="@style/DaysTexts"
+            android:text="@string/tuesday"
+            app:layout_constraintStart_toEndOf="@id/MondayText"
+            app:layout_constraintTop_toBottomOf="@id/WindValue"
+            app:layout_constraintEnd_toStartOf="@id/WednesdayText"/>
+
+        <ImageView
+            android:id="@+id/TuesdayImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/rainy"
+            app:layout_constraintEnd_toEndOf="@id/TuesdayText"
+            app:layout_constraintStart_toStartOf="@id/TuesdayText"
+            app:layout_constraintTop_toBottomOf="@id/TuesdayText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mondaysTemperature"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/TuesdayImage"
+            app:layout_constraintStart_toStartOf="@id/TuesdayImage"
+            app:layout_constraintTop_toBottomOf="@id/TuesdayImage" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:id="@+id/WednesdayText"
+            android:text="@string/itIsWednesdayMyDudes"
+            app:layout_constraintStart_toEndOf="@id/TuesdayText"
+            app:layout_constraintTop_toBottomOf="@id/WindValue"
+            app:layout_constraintEnd_toStartOf="@id/ThursdayText"/>
+
+        <ImageView
+            android:id="@+id/WednesdayImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/wednesday"
+            app:layout_constraintEnd_toEndOf="@id/WednesdayText"
+            app:layout_constraintStart_toStartOf="@id/WednesdayText"
+            app:layout_constraintTop_toBottomOf="@id/WednesdayText" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:text="@string/wednesdayTemperature"
+            app:layout_constraintEnd_toEndOf="@id/WednesdayImage"
+            app:layout_constraintStart_toStartOf="@id/WednesdayImage"
+            app:layout_constraintTop_toBottomOf="@id/WednesdayImage" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:id="@+id/ThursdayText"
+            android:text="@string/thursday"
+            app:layout_constraintStart_toEndOf="@id/WednesdayText"
+            app:layout_constraintTop_toBottomOf="@id/WindValue"
+            app:layout_constraintEnd_toStartOf="@id/FridayText"/>
+
+        <ImageView
+            android:id="@+id/ThursdayImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sunny"
+            app:layout_constraintEnd_toEndOf="@id/ThursdayText"
+            app:layout_constraintStart_toStartOf="@id/ThursdayText"
+            app:layout_constraintTop_toBottomOf="@id/ThursdayText" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:text="@string/thursdayTemperature"
+            app:layout_constraintEnd_toEndOf="@id/ThursdayImage"
+            app:layout_constraintStart_toStartOf="@id/ThursdayImage"
+            app:layout_constraintTop_toBottomOf="@id/ThursdayImage" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:id="@+id/FridayText"
+            android:text="@string/friday"
+            app:layout_constraintStart_toEndOf="@id/ThursdayText"
+            app:layout_constraintTop_toBottomOf="@id/WindValue"
+            app:layout_constraintEnd_toStartOf="@id/SaturdayText"/>
+
+        <ImageView
+            android:id="@+id/FridayImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sunny"
+            app:layout_constraintEnd_toEndOf="@id/FridayText"
+            app:layout_constraintStart_toStartOf="@id/FridayText"
+            app:layout_constraintTop_toBottomOf="@id/FridayText" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:text="@string/fridaysTemperature"
+            app:layout_constraintEnd_toEndOf="@id/FridayImage"
+            app:layout_constraintStart_toStartOf="@id/FridayImage"
+            app:layout_constraintTop_toBottomOf="@id/FridayImage" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:id="@+id/SaturdayText"
+            android:text="@string/saturday"
+            app:layout_constraintStart_toEndOf="@id/FridayText"
+            app:layout_constraintTop_toBottomOf="@id/WindValue"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/SaturdayImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/rainy"
+            app:layout_constraintEnd_toEndOf="@id/SaturdayText"
+            app:layout_constraintStart_toStartOf="@id/SaturdayText"
+            app:layout_constraintTop_toBottomOf="@id/SaturdayText" />
+
+        <TextView
+            style="@style/DaysTexts"
+            android:text="@string/saturdaysTemperature"
+            app:layout_constraintEnd_toEndOf="@id/SaturdayImage"
+            app:layout_constraintStart_toStartOf="@id/SaturdayImage"
+            app:layout_constraintTop_toBottomOf="@id/SaturdayImage" />
+
+        <Button
+            style="@style/BottomButtons"
+            android:id="@+id/buttonHome"
+            android:text="@string/buttonHome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonSettings"/>
+
+        <Button
+            style="@style/BottomButtons"
+            android:id="@+id/buttonSettings"
+            android:text="@string/buttonSettings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonHome"
+            app:layout_constraintEnd_toStartOf="@id/buttonSquares"/>
+
+        <Button
+            style="@style/BottomButtons"
+            android:id="@+id/buttonSquares"
+            android:text="@string/buttonDontKnowWhatItIs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonSettings"
+            app:layout_constraintEnd_toStartOf="@+id/buttonGeo"/>
+
+        <Button
+            style="@style/BottomButtons"
+            android:id="@+id/buttonGeo"
+            android:text="@string/buttonGeo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonSquares"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
